@@ -1,0 +1,7 @@
+.buttonPrimary {
+  @apply w-full py-[0.95rem] rounded-lg border-none outline-none bg-cyanBlue text-white hover:bg-[#2AB0AF] transition-all duration-200 flex items-center justify-center font-semibold;
+}
+
+.buttonSecondary {
+  @apply w-full py-[0.95rem] rounded-lg border border-solid border-navy1 text-navy1 outline-none flex items-center justify-center font-semibold;
+}

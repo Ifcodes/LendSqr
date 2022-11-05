@@ -1,0 +1,49 @@
+.inputWrapper {
+  @apply w-full flex flex-col;
+
+  .label {
+    @apply text-sm text-navy1 font-medium;
+  }
+
+  .fieldWrapper {
+    @apply flex items-center w-full rounded-md border-2 border-solid border-borderColor1 relative h-[2.5rem];
+
+    input {
+      @apply w-full h-full pl-4 border-none outline-none;
+
+      ::placeholder {
+        @apply text-sm text-navy1 font-normal;
+      }
+    }
+
+    .searchIconWrapper {
+      @apply w-[3.5rem] h-[2.5rem] absolute top-[-1] right-[-8px] rounded-bl-none rounded-tl-none;
+    }
+  }
+
+  .authInputFieldWrapper {
+    @apply flex items-center w-full h-[3.125rem] rounded-md border-2 border-solid border-borderColor1 relative;
+
+    input:focus .authInputFieldWrapper {
+      @apply border-cyanBlue bg-navy;
+    }
+
+    input {
+      @apply w-full h-full pl-4 border-none outline-none text-navy text-sm font-normal;
+
+      &:-webkit-autofill,
+      :-webkit-autofill:hover,
+      :-webkit-autofill:focus :-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+        -webkit-text-fill-color: #213f7d !important;
+      }
+      ::placeholder {
+        @apply text-sm text-navy1 font-normal;
+      }
+    }
+
+    .pswToggle {
+      @apply w-[4.5rem] h-[100%]  border-none outline-none px-4 text-cyanBlue font-semibold text-xs;
+    }
+  }
+}

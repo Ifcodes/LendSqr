@@ -1,0 +1,11 @@
+.componentWrapper {
+  @apply mt-4 border-b-2 border-solid border-borderColor1 pb-4;
+}
+
+.text {
+  @apply font-bold;
+}
+
+.btnClass {
+  @apply w-80 mx-auto;
+}
