@@ -1,0 +1,24 @@
+.showOverlay {
+  @apply w-28 min-h-[8rem] bg-transparent block absolute top-0 right-0;
+}
+
+.hideOverlay {
+  @apply w-full hidden;
+}
+
+.cardContent {
+  @apply absolute w-full bg-white shadow-primary top-[0.5rem] rounded-sm px-2;
+}
+
+.showOverlay .cardContent {
+  animation: drop 5s linear ease-out;
+}
+
+@keyframes drop {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 5rem;
+  }
+}

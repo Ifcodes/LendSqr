@@ -26,12 +26,38 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("/Fonts/Roboto/Roboto-Medium.woff2") format("woff2"),
+    url("/Fonts/Roboto/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/Fonts/Roboto/Roboto-Regular.woff2") format("woff2"),
+    url("/Fonts/Roboto/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("/Fonts/WorkSans/WorkSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Avenir Next LT Pro", sans-serif;
+  font-family: "Work Sans", "Avenir Next LT Pro", "Roboto", sans-serif;
 }
 
 a {
@@ -41,6 +67,15 @@ a {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #39cdcc;
 }
 
 @media (prefers-color-scheme: dark) {

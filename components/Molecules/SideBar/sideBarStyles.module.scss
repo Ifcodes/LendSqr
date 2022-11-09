@@ -1,0 +1,8 @@
+.sideBarWrapper {
+  @apply w-full bg-white h-screen overflow-y-auto py-10;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+
+  .switchOrgSelector {
+    @apply pl-7 cursor-pointer flex items-center;
+  }
+}

@@ -1,10 +1,10 @@
 import React from "react";
 import Button from "../../components/Atoms/Button";
 import Input from "../../components/Atoms/Input";
+import PageHead from "../../components/Atoms/PageHead";
 import { H1, Text } from "../../components/Atoms/Typography";
 import HeroImg from "../../components/Atoms/Vectors/HeroImage";
 import Logo from "../../components/Atoms/Vectors/Logo";
-import PageHead from "../../components/Molecules/PageHead";
 import styles from "./styleGuide.module.scss";
 
 const StyleGuide = () => {

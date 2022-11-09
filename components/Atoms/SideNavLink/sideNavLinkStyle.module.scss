@@ -1,0 +1,7 @@
+.itemWrapper {
+  @apply w-full pl-7 pr-4 py-3 cursor-pointer hover:border-l-4 hover:border-solid hover:border-cyanBlue hover:bg-cyanLight transition-all relative;
+
+  &.active {
+    @apply border-l-4 border-solid border-cyanBlue bg-cyanLight;
+  }
+}

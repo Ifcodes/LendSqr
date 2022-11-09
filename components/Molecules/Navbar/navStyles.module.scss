@@ -1,0 +1,11 @@
+.nav {
+  @apply bg-white grid grid-cols-2 items-center w-full h-[6.25rem] shadow-primary px-7 sticky top-0 left-0;
+}
+
+.logoCont {
+  @apply flex justify-between items-center;
+}
+
+.userCont {
+  @apply flex items-center justify-end;
+}

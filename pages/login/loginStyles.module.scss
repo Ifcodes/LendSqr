@@ -1,0 +1,40 @@
+.login {
+  @apply w-full h-screen grid grid-cols-2 items-center relative font-avenirNext;
+
+  .hero {
+    @apply flex flex-col justify-center items-center h-full;
+
+    .heroImg {
+      @apply w-[80%];
+    }
+  }
+
+  .logo {
+    @apply absolute top-[4rem] left-[6rem];
+  }
+
+  .formWrapper {
+    @apply flex flex-col h-full;
+    box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+
+    .titleCont {
+      @apply ml-[6.25rem] mt-24;
+    }
+
+    form {
+      @apply w-[70%] mx-auto mt-14;
+
+      .forgotPwd {
+        @apply mt-6 uppercase font-semibold text-xs text-cyanBlue;
+      }
+
+      .inputField {
+        @apply mt-6;
+      }
+
+      .btnWrapper {
+        @apply mt-[1.875rem];
+      }
+    }
+  }
+}

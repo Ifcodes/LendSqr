@@ -1,0 +1,23 @@
+.mainWrapper {
+  @apply flex items-center relative;
+}
+
+.userNameCont {
+  @apply flex items-center cursor-pointer ml-4;
+
+  .rotateArrow {
+    @apply ml-3 rotate-180 transition-transform;
+  }
+}
+
+.dropdownOverlay {
+  @apply w-20 min-h-0 top-7;
+}
+
+.dropdownUserCont {
+  @apply flex items-center cursor-pointer my-3;
+
+  .dropdownUserImg {
+    @apply w-4 h-4 mr-2;
+  }
+}
