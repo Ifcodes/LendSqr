@@ -1,0 +1,11 @@
+.cardWrapper {
+  @apply w-60 h-40 bg-white border border-solid border-[#213f7d0f] rounded pl-[1.875rem];
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+  .cardTitle {
+    @apply uppercase text-navy1 text-base font-medium my-[0.875rem];
+  }
+  .statText {
+    @apply text-navy text-2xl font-semibold my-0;
+  }
+}

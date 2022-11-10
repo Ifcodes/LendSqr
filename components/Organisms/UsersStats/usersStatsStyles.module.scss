@@ -1,0 +1,18 @@
+.statsWrapper {
+  @apply w-full grid mt-10;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  row-gap: 1rem;
+}
+
+.iconBg1 {
+  @apply bg-[#df18ff1a];
+}
+.iconBg2 {
+  @apply bg-[#5718ff1a];
+}
+.iconBg3 {
+  @apply bg-[#f55f441a];
+}
+.iconBg4 {
+  @apply bg-[#ff33661a];
+}

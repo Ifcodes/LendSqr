@@ -2,11 +2,11 @@
   @apply bg-dashboardWhite w-full h-screen overflow-hidden relative;
 
   .dashboardContent {
-    @apply grid;
+    @apply w-full h-full grid overflow-hidden;
     grid-template-columns: 18rem 1fr;
 
     .dashboardChild {
-      @apply p-[3.75rem];
+      @apply p-[3.75rem] h-full overflow-y-auto;
     }
   }
 }

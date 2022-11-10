@@ -1,0 +1,44 @@
+.tableWrapper {
+  @apply w-full h-[90vh] mt-10 overflow-hidden;
+
+  .tableCont {
+    @apply w-full h-[80%] bg-white border border-solid border-[#213f7d0f] rounded-[4px] overflow-auto px-[1.875rem] pb-[1.875rem] relative;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .table {
+    @apply w-full h-full overflow-auto;
+
+    .thead {
+      @apply w-full sticky top-0 left-0 bg-white;
+
+      .th {
+        @apply pt-[1.875rem] pb-4;
+
+        .theadContent {
+          @apply flex items-center;
+
+          .tableHeadText {
+            @apply text-xs font-semibold text-navy1 mr-4;
+          }
+
+          .filterIcon {
+            @apply cursor-pointer;
+          }
+        }
+      }
+    }
+
+    .tbody {
+      @apply overflow-auto;
+
+      .dataTableRow:not(:last-child) {
+        @apply border-b border-solid border-[#213f7d1a];
+      }
+
+      .td {
+        @apply py-4;
+      }
+    }
+  }
+}

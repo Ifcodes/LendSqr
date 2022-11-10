@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className={styles.nav}>
       <div className={styles.logoCont}>
         <Logo />
-        <div className="w-[25rem]">
+        <div className="w-full">
           <Input
             type="search"
             name="search"
