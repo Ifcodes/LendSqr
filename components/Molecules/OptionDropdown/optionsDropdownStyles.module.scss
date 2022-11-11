@@ -1,0 +1,25 @@
+.dropdownWrapper {
+  @apply relative w-fit;
+
+  .dropdownContent {
+    @apply w-fit absolute right-0 top-[100%] flex flex-col justify-start items-start p-4 rounded-[4px] border border-solid border-[#545f7d0a] bg-white z-10 origin-top-right scale-0 min-w-[11rem];
+
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease;
+
+    &.showDropDown {
+      @apply scale-100;
+    }
+
+    & > button,
+    & > a,
+    & > div,
+    & > span {
+      @apply mb-5 w-full cursor-pointer;
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+  }
+}

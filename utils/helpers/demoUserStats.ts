@@ -1,4 +1,5 @@
 import DocOutlineIcon from "../../components/Atoms/Vectors/DocOutlineIcon";
+import MoneyIcon from "../../components/Atoms/Vectors/MoneyIcon";
 import UsersGroupIcon from "../../components/Atoms/Vectors/UsersGroupOutlineIcon";
 import UserOutlineIcon from "../../components/Atoms/Vectors/usersOutline";
 
@@ -23,7 +24,7 @@ export const demoUserStats = [
   },
   {
     title: "Users with savings",
-    icon: UserOutlineIcon,
+    icon: MoneyIcon,
     iconBg: "#ff33661a",
     value: 102453,
   },

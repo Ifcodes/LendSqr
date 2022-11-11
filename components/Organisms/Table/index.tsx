@@ -25,7 +25,9 @@ const Table = ({
                 <th key={`${item.key}-${index}`} className={styles.th}>
                   <div className={styles.theadContent}>
                     <span className={styles.tableHeadText}>{item.name}</span>
-                    {item.key && <FilterIcon className={styles.filterIcon} />}
+                    {item.key !== "cta" && (
+                      <FilterIcon className={styles.filterIcon} />
+                    )}
                   </div>
                 </th>
               ))}

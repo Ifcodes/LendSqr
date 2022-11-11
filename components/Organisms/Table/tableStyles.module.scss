@@ -10,7 +10,7 @@
     @apply w-full h-full overflow-auto;
 
     .thead {
-      @apply w-full sticky top-0 left-0 bg-white;
+      @apply w-full sticky top-0 left-0 bg-white z-20;
 
       .th {
         @apply pt-[1.875rem] pb-4;
