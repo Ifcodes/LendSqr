@@ -1,0 +1,19 @@
+.wrapper {
+  @apply w-full flex items-center;
+
+  .userImg {
+    @apply w-[6.25rem] h-[6.25rem] rounded-full bg-[#213f7d29] flex items-center justify-center;
+  }
+
+  .nameCont {
+    @apply ml-5 flex flex-col;
+
+    h2 {
+      @apply text-[1.375rem] text-navy font-medium;
+    }
+
+    span {
+      @apply text-base text-navy1;
+    }
+  }
+}

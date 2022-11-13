@@ -5,3 +5,16 @@
     @apply ml-4;
   }
 }
+
+.blackListBtn,
+.activateBtn {
+  @apply border border-solid bg-transparent w-[10.6rem] py-3 uppercase text-sm tracking-widest;
+}
+
+.blackListBtn {
+  @apply border-[#E4033B] text-[#E4033B] hover:bg-[#ee0b44] hover:text-white;
+}
+
+.activateBtn {
+  @apply border-cyanBlue text-cyanBlue hover:bg-cyanBlue hover:text-white ml-9;
+}

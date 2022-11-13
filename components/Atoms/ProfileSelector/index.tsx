@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { memo, useEffect, useState } from "react";
 import Dropdown from "../Dropdown";
+import ProfileImage from "../UserProfileImage";
 import ArrowDown from "../Vectors/ArrowDown";
 import Avatar from "../Vectors/Avatar";
 import styles from "./profileSelectorStyles.module.scss";
@@ -41,9 +42,13 @@ const ProfileSelector = () => {
     setProfiles(data);
     setSelectedProfile(data[0]);
   }, []);
+
   return (
     <div className={styles.mainWrapper}>
-      <Avatar imgLink={profileImgLink} userInitial={username?.charAt(0)} />
+      <ProfileImage
+        imgLink={profileImgLink}
+        userInitial={username?.charAt(0)}
+      />
       <div
         className={styles.userNameCont}
         onClick={() => setShowDropdown(!showDropdown)}
@@ -70,7 +75,7 @@ const ProfileSelector = () => {
             }}
             className={styles.dropdownUserCont}
           >
-            <Avatar
+            <ProfileImage
               imgLink={profileImgLink}
               imgAlt="User Image"
               userInitial={username?.charAt(0)}
