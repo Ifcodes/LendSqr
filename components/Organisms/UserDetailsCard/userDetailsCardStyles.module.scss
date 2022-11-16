@@ -1,0 +1,39 @@
+.cardWrapper {
+  @apply w-full mt-10;
+
+  .basicInfoCard {
+    @apply w-full h-[13.1rem] bg-white border border-solid border-[#213f7d0f] rounded-[4px] pt-[1.875rem] pl-[1.875rem];
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+    .basicInfoCont {
+      @apply min-w-[38.3rem] flex items-center;
+    }
+  }
+
+  .tierCont {
+    @apply w-max px-[1.875rem] mx-[1.875rem] border-l border-r border-solid border-[#545f7d33] flex flex-col items-center h-[5rem] justify-center;
+
+    span {
+      @apply text-navy1;
+    }
+
+    .starsCont {
+      @apply flex items-center mt-3;
+
+      & > svg {
+        @apply mr-[4px];
+      }
+    }
+  }
+
+  .accBalCont {
+    @apply flex flex-col;
+
+    .accBalance {
+      @apply text-navy text-[1.375rem] font-medium mb-3 mt-0;
+    }
+    .bvnText {
+      @apply text-xs text-navy;
+    }
+  }
+}

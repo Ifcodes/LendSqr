@@ -7,12 +7,12 @@ import styles from "./usernameWrapperStyles.module.scss";
 const UsernameWrapper = memo(
   ({
     userImgLink,
-    userName,
-    userAccount,
+    userFullName,
+    userAccountNo,
   }: {
     userImgLink?: string;
-    userName?: string;
-    userAccount?: string;
+    userFullName?: string;
+    userAccountNo?: string;
   }) => {
     return (
       <div className={styles.wrapper}>
@@ -23,8 +23,8 @@ const UsernameWrapper = memo(
           className={styles.userImg}
         />
         <div className={styles.nameCont}>
-          <h2>{userName}</h2>
-          <span>{userAccount}</span>
+          <h2>{userFullName}</h2>
+          <span>{userAccountNo}</span>
         </div>
       </div>
     );
