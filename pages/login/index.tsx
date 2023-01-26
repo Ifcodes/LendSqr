@@ -25,7 +25,7 @@ const Login = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    router.push("/dashboard");
+    router.push("/users");
   };
   return (
     <div className={`${styles.login}`}>

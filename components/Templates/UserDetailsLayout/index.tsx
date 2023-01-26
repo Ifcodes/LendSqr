@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
-import Button from "../../components/Atoms/Button";
-import PageHead from "../../components/Atoms/PageHead";
-import BackArrow from "../../components/Atoms/Vectors/BackArrow";
-import UserDetailsCard from "../../components/Organisms/UserDetailsCard";
-import DashboardLayout from "../../components/Templates/DashboardLayout";
-import styles from "./usersStyles.module.scss";
+import React, { ReactNode } from "react";
+import Button from "../../Atoms/Button";
+import PageHead from "../../Atoms/PageHead";
+import BackArrow from "../../Atoms/Vectors/BackArrow";
+import UserDetailsCard from "../../Organisms/UserDetailsCard";
+import DashboardLayout from "../DashboardLayout";
+import styles from "./userDetailsLayoutStyles.module.scss";
 
-const UserDetails = () => {
+const UserDetailsLayout = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
   const { id } = router.query;
 
@@ -26,12 +26,13 @@ const UserDetails = () => {
             btnText={"Blacklist user"}
             otherClasses={styles.blackListBtn}
           />
-          <Button btnText={"Activate user"} otherClasses={styles.activateBtn} />
+          <Button btnText="Activate user" otherClasses={styles.activateBtn} />
         </div>
       </div>
       <UserDetailsCard id={id} />
+      <div>{children}</div>
     </DashboardLayout>
   );
 };
 
-export default UserDetails;
+export default UserDetailsLayout;

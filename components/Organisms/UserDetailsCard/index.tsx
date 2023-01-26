@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { users } from "../../../utils/helpers/demoUsers";
 import StarFilledIcon from "../../Atoms/Vectors/StarFilledIcon";
 import StarOutlineIcon from "../../Atoms/Vectors/StarOutlineIcon";
+import Tabs from "../../Molecules/Tabs";
 import UsernameWrapper from "../../Molecules/UsernameWrapper";
 import styles from "./userDetailsCardStyles.module.scss";
+import { userProfileTabList } from "../../../utils/constants/userProfileTabs";
 
 type Props = {
   username?: string;
@@ -42,6 +44,9 @@ const UserDetailsCard = ({ id }: { id?: string | Array<string> }) => {
               className={styles.bvnText}
             >{`${selectedUser?.profile.bvn}/Providus Bank`}</span>
           </div>
+        </div>
+        <div className={styles.tabsCont}>
+          <Tabs tabs={userProfileTabList} />
         </div>
       </div>
     </div>

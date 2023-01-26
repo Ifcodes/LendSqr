@@ -1,0 +1,11 @@
+.tabsWrapper {
+  @apply w-full flex justify-between items-end  px-[1.875rem];
+}
+
+.tab {
+  @apply p-[10px] transition-all cursor-pointer text-center;
+}
+
+.active {
+  @apply p-[10px] transition-all cursor-pointer border-b-2 border-solid border-cyanBlue text-center text-cyanBlue;
+}

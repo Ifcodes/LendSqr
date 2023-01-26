@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageHead from "../components/Atoms/PageHead";
 import styles from "../styles/Home.module.scss";
 import Login from "./login";
+import { StyledEngineProvider } from "@mui/material/styles";
 
 export default function Home() {
   return (

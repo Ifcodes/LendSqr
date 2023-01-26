@@ -1,28 +1,50 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import StatusCard from "../../components/Atoms/StatusCard";
 import DeleteUserIcon from "../../components/Atoms/Vectors/DeleteUserIcon";
 import EyeIcon from "../../components/Atoms/Vectors/EyeIcon";
 import OptionsIcon from "../../components/Atoms/Vectors/OptionsIcon";
 import UserWithTick from "../../components/Atoms/Vectors/UserWithTickIcon";
+import FilterDropdown from "../../components/Molecules/FilterDropdown";
 import OptionsDropdown from "../../components/Molecules/OptionDropdown";
 import Table from "../../components/Organisms/Table";
 import UsersStats from "../../components/Organisms/UsersStats";
 import DashboardLayout from "../../components/Templates/DashboardLayout";
+import { getAllUsers } from "../../Services/userServices";
 import { getDate } from "../../utils/getDate";
 import { users } from "../../utils/helpers/demoUsers";
 import styles from "./usersStyles.module.scss";
 
 const UserPage = () => {
-  const router = useRouter();
-  const { id } = router.query;
+  const [openFilter, setOpenFilter] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [users, setUsers] = useState([])
+
+  const getUsers = () => {
+    setIsLoading(true);
+    getAllUsers(
+      (res: any) => {
+        setIsLoading(false);
+        setUsers(res.data)
+      },
+      (err: any) => {
+        setIsLoading(false);
+        console.log({ err });
+      }
+    );
+  };
+
+  useEffect(() => {
+    getUsers();
+  }, []);
 
   return (
     <DashboardLayout>
       <span className=" text-2xl text-navy font-medium">Users</span>
       <UsersStats />
       <Table
+        loading={isLoading}
         headings={[
           { name: "ORGANIZATION", key: "orgName" },
           { name: "USERNAME", key: "username" },
@@ -32,7 +54,7 @@ const UserPage = () => {
           { name: "STATUS", key: "status" },
           { name: "", key: "cta" },
         ]}
-        tableData={users.map((user, index) => {
+        tableData={users.map((user: any) => {
           const dateJoined = getDate(user.createdAt);
           return {
             orgName: (
@@ -54,7 +76,7 @@ const UserPage = () => {
             cta: (
               <OptionsDropdown>
                 <Link
-                  href={`/users/${user.id}`}
+                  href={`/users/${user.id}/general-details`}
                   className={styles.optionContainer}
                 >
                   <EyeIcon />

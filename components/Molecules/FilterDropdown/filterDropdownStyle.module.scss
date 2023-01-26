@@ -1,0 +1,16 @@
+.dropdownOverlay {
+  @apply w-80 top-16 left-4 z-50;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.dropdownCont {
+  width: 100%;
+  padding: 1rem;
+}
+.inputCont {
+  @apply my-4;
+}
+.btnCont {
+  @apply w-full flex justify-between items-center gap-4 my-[1.5rem];
+}

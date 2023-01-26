@@ -31,11 +31,10 @@ const SideNavLink = ({
   return (
     <div
       ref={clickRef}
-      className={`${styles.itemWrapper} ${isActive && styles.active}`}
       onClick={handleClick}
     >
       <div
-        className={`flex items-center justify-between w-full  ${
+        className={`${styles.itemWrapper} ${isActive && styles.active} flex items-center justify-between w-full  ${
           hasOptions ? "opacity-100" : isActive === false ? "opacity-[0.6]" : ""
         }`}
       >
@@ -49,8 +48,8 @@ const SideNavLink = ({
           </div>
         )}
       </div>
-      {hasOptions && isActive && (
-        <div className="w-full px-7 mt-2 min-h-[3rem]">{optionChild}</div>
+      {hasOptions &&  (
+        <div className={`${styles.dropDown} ${isActive && styles.showDropdown}`}>{optionChild}</div>
       )}
     </div>
   );

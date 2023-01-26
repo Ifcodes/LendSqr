@@ -5,3 +5,13 @@
     @apply border-l-4 border-solid border-cyanBlue bg-cyanLight;
   }
 }
+
+.dropDown{
+  @apply w-full h-0 px-7 mt-2 min-h-[3rem];
+  transition: height 0.5s ease;
+  background-color: red;
+}
+
+// .showDropDown{
+//   @apply h-max;
+// }

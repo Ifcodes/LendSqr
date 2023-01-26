@@ -1,20 +1,27 @@
 .tableWrapper {
-  @apply w-full h-[90vh] mt-10 overflow-hidden;
+  @apply w-full h-[90vh] mt-10 overflow-hidden relative;
+
+  .emptyPage {
+    @apply w-full h-[70vh] absolute top-0 left-0;
+  }
 
   .tableCont {
-    @apply w-full h-[80%] bg-white border border-solid border-[#213f7d0f] rounded-[4px] overflow-auto px-[1.875rem] pb-[1.875rem] relative;
+    @apply w-full h-[80%] bg-white border border-solid border-borderColor1 rounded-[4px] overflow-auto pb-[1.875rem] relative;
     box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   }
 
   .table {
-    @apply w-full h-full overflow-auto;
+    @apply w-full h-full;
 
     .thead {
-      @apply w-full sticky top-0 left-0 bg-white z-20;
+      @apply w-full sticky top-0 left-0 bg-white z-20 px-[1.875rem];
 
       .th {
         @apply pt-[1.875rem] pb-4;
 
+        &:first-child {
+          @apply pl-8;
+        }
         .theadContent {
           @apply flex items-center;
 
@@ -30,7 +37,7 @@
     }
 
     .tbody {
-      @apply overflow-auto;
+      @apply w-full h-full overflow-auto;
 
       .dataTableRow:not(:last-child) {
         @apply border-b border-solid border-[#213f7d1a];
@@ -38,6 +45,10 @@
 
       .td {
         @apply py-4;
+
+        &:first-child {
+          @apply pl-8;
+        }
       }
     }
   }

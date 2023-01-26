@@ -1,0 +1,26 @@
+.descriptionsWrapper {
+  @apply w-full grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  row-gap: 1rem;
+  gap: 1rem;
+
+  .label {
+    @apply text-xs text-navy1 uppercase my-2;
+  }
+
+  .value {
+    @apply text-base font-semibold text-navy1 my-0;
+  }
+
+  .descriptionCont {
+    @apply w-full;
+  }
+}
+
+.descriptionsOverlay {
+  @apply w-full pb-7 border-b border-solid border-borderColor1 font-workSans mb-7;
+
+  .title {
+    @apply font-medium text-base text-navy mb-7;
+  }
+}

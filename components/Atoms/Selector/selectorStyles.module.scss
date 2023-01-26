@@ -1,0 +1,31 @@
+.selectorContainer {
+  @apply w-full mt-6;
+
+  label {
+    @apply text-sm text-navy1 font-medium;
+  }
+
+  .selector {
+    @apply w-full h-10 border border-solid border-borderColor1 flex items-center justify-between rounded-lg bg-white mt-4 cursor-pointer relative;
+
+    select {
+      @apply flex-grow w-full h-full bg-transparent outline-none z-10 text-sm pl-5 bottom-0 opacity-20 appearance-none cursor-pointer;
+
+      :-webkit-autofill,
+      :-webkit-autofill:hover,
+      :-webkit-autofill:focus,
+      :-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: #000 !important;
+      }
+    }
+
+    option {
+      @apply w-full text-navy1;
+    }
+
+    svg {
+      @apply absolute right-2 z-[5];
+    }
+  }
+}

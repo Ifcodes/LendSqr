@@ -2,7 +2,7 @@
   @apply w-full mt-10;
 
   .basicInfoCard {
-    @apply w-full h-[13.1rem] bg-white border border-solid border-[#213f7d0f] rounded-[4px] pt-[1.875rem] pl-[1.875rem];
+    @apply w-full h-[13.1rem] bg-white border border-solid border-[#213f7d0f] rounded-[4px] pt-[1.875rem] pl-[1.875rem] relative;
     box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 
     .basicInfoCont {
@@ -35,5 +35,9 @@
     .bvnText {
       @apply text-xs text-navy;
     }
+  }
+
+  .tabsCont {
+    @apply w-full absolute bottom-0 left-0;
   }
 }
