@@ -19,18 +19,17 @@ import styles from "./usersStyles.module.scss";
 const UserPage = () => {
   const [openFilter, setOpenFilter] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([]);
 
   const getUsers = () => {
     setIsLoading(true);
     getAllUsers(
       (res: any) => {
         setIsLoading(false);
-        setUsers(res.data)
+        setUsers(res.data);
       },
       (err: any) => {
         setIsLoading(false);
-        console.log({ err });
       }
     );
   };
@@ -74,23 +73,25 @@ const UserPage = () => {
             ),
             status: <StatusCard text="Blacklisted" />,
             cta: (
-              <OptionsDropdown>
-                <Link
-                  href={`/users/${user.id}/general-details`}
-                  className={styles.optionContainer}
-                >
-                  <EyeIcon />
-                  <span>View Details</span>
-                </Link>
-                <div className={styles.optionContainer}>
-                  <DeleteUserIcon />
-                  <span>Blacklist User</span>
-                </div>
-                <div className={styles.optionContainer}>
-                  <UserWithTick />
-                  <span>Activate User</span>
-                </div>
-              </OptionsDropdown>
+              <div className="p-4">
+                <OptionsDropdown>
+                  <Link
+                    href={`/users/${user.id}/general-details`}
+                    className={styles.optionContainer}
+                  >
+                    <EyeIcon />
+                    <span>View Details</span>
+                  </Link>
+                  <div className={styles.optionContainer}>
+                    <DeleteUserIcon />
+                    <span>Blacklist User</span>
+                  </div>
+                  <div className={styles.optionContainer}>
+                    <UserWithTick />
+                    <span>Activate User</span>
+                  </div>
+                </OptionsDropdown>
+              </div>
             ),
           };
         })}

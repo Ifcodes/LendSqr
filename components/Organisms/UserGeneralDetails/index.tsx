@@ -13,20 +13,17 @@ import styles from "./generalDetails.module.scss";
 const UserGeneralDetails = () => {
   const router = useRouter();
   const { id } = router.query;
-  const [selectedUser, setSelectedUser] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
+  const [selectedUser, setSelectedUser] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  console.log({ selectedUser });
   const getUsers = () => {
     setIsLoading(true);
     getUsersId(
       (res: any) => {
         setIsLoading(false);
-        console.log({res})
       },
       (err: any) => {
         setIsLoading(false);
-        console.log({ err });
       },
       { id }
     );
@@ -34,8 +31,10 @@ const UserGeneralDetails = () => {
 
   useEffect(() => {
     getUsers();
-    const storedUser = 
-    typeof localStorage !== "undefined" ? localStorage.getItem("selectedUser") || "" : "";
+    const storedUser =
+      typeof localStorage !== "undefined"
+        ? localStorage.getItem("selectedUser") || ""
+        : "";
     const usersData = JSON.parse(storedUser);
     setSelectedUser(usersData?.data);
   }, []);
