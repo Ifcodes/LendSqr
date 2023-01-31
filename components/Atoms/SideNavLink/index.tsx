@@ -3,6 +3,7 @@ import React, { ReactNode, useRef } from "react";
 import { useClickAway } from "react-use";
 import ArrowDownOutline from "../Vectors/ArrowDownOutline";
 import styles from "./sideNavLinkStyle.module.scss";
+import clsx from "clsx";
 
 const SideNavLink = ({
   icon,
@@ -28,6 +29,7 @@ const SideNavLink = ({
   useClickAway(clickRef, () => {
     setIsActive(false);
   });
+
   return (
     <div
       ref={clickRef}
@@ -49,7 +51,9 @@ const SideNavLink = ({
         )}
       </div>
       {hasOptions &&  (
-        <div className={`${styles.dropDown} ${isActive && styles.showDropdown}`}>{optionChild}</div>
+        <ul className={clsx(`${styles.dropDown}`, isActive && `${styles.showDropDown}`)}>
+          {optionChild}
+        </ul>
       )}
     </div>
   );

@@ -19,6 +19,7 @@ const SideBar = () => {
     { orgName: "Ayodeji", orgLink: "#" },
     { orgName: "Deji", orgLink: "#" },
   ];
+
   return (
     <aside className={styles.sideBarWrapper}>
       <SideNavLink
@@ -30,7 +31,7 @@ const SideBar = () => {
         setIsActive={setSwitchOrg}
         handleClick={() => setSwitchOrg(!switchOrg)}
         optionChild={organizations.map(({ orgName, orgLink }) => (
-          <div key={orgName} className="mt-2">
+          <li key={orgName} className="py-2 pl-7 cursor-pointer hover:border-l-4 hover:border-solid hover:border-cyanBlue hover:bg-cyanLight">
             <Link
               href={orgLink}
               onClick={() => setSwitchOrg(false)}
@@ -38,7 +39,7 @@ const SideBar = () => {
             >
               {orgName}
             </Link>
-          </div>
+          </li>
         ))}
       />
 

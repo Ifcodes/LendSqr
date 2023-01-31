@@ -36,13 +36,16 @@ const FilterDropdown = ({ open, setOpen }: FilterDropdownProps) => {
           />
         </div>
         <div className={styles.inputCont}>
-          <Input label="Username" placeholder="User" />
+          <Input 
+          id="username"
+          label="Username" placeholder="User" />
         </div>
         <div className={styles.inputCont}>
-          <Input label="Email" placeholder="Email" />
+          <Input id="email" label="Email" placeholder="Email" />
         </div>
         <div className={styles.inputCont}>
           <Input
+            id="date"
             type="date"
             label="Date"
             placeholder="Date"
@@ -51,10 +54,12 @@ const FilterDropdown = ({ open, setOpen }: FilterDropdownProps) => {
           />
         </div>
         <div className={styles.inputCont}>
-          <Input label="Phone Number" placeholder="Phone Number" />
+          <Input id="phone" label="Phone Number" placeholder="Phone Number" />
         </div>
         <div className={styles.inputCont}>
-          <Input label="Status" placeholder="Status" />
+          <Input
+           id="status"
+           label="Status" placeholder="Status" />
         </div>
         <div className={styles.btnCont}>
           <Button btnText="Reset" isSecondary />

@@ -33,7 +33,6 @@ const Table = ({
   const [rowsPerPage, setRowsPerPage] = useState(25);
   const [tableRows, setTableRows] = useState(tableData.slice(0, rowsPerPage));
 
-  console.log({ tableData });
   const handlePageChange = (event: ChangeEvent<unknown>, value: number) => {
     setCurrentPage(value);
     const current = value * rowsPerPage - rowsPerPage;

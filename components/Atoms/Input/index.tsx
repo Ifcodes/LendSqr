@@ -7,10 +7,9 @@ import SearchIcon from "../Vectors/SearchIcon";
 import styles from "./inputStyles.module.scss";
 
 const Input = memo(
-  ({ label, type, forAuth, onSearch, ...props }: InputProps) => {
+  ({ label, type, forAuth, id, onSearch, ...props }: InputProps) => {
     const [showPassword, setShowPassword] = useState(false);
 
-    const id = generatedId();
     return (
       <div className={styles.inputWrapper}>
         <label htmlFor={id} className={styles.label}>

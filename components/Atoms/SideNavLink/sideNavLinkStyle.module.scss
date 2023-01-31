@@ -7,11 +7,17 @@
 }
 
 .dropDown{
-  @apply w-full h-0 px-7 mt-2 min-h-[3rem];
+  @apply w-full h-0 bg-dashboardWhite;
+  clear: both;
   transition: height 0.5s ease;
-  background-color: red;
+  list-style-type: none;
+  overflow: hidden;
 }
 
-// .showDropDown{
-//   @apply h-max;
-// }
+.showDropDown {
+  @apply w-full h-32 bg-dashboardWhite;
+  clear: both;
+  transition: height 0.5s ease;
+  list-style-type: none;
+}
+

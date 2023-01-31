@@ -14,6 +14,7 @@ const Navbar = () => {
         <Logo />
         <div className="w-full">
           <Input
+            id="searchBox"
             type="search"
             name="search"
             value={searchItem}
