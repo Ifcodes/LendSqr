@@ -4,6 +4,7 @@ import { useClickAway } from "react-use";
 import ArrowDownOutline from "../Vectors/ArrowDownOutline";
 import styles from "./sideNavLinkStyle.module.scss";
 import clsx from "clsx";
+import { ArrowUpwardOutlined } from "@mui/icons-material";
 
 const SideNavLink = ({
   icon,
@@ -31,12 +32,11 @@ const SideNavLink = ({
   });
 
   return (
-    <div
-      ref={clickRef}
-      onClick={handleClick}
-    >
+    <div ref={clickRef} onClick={handleClick}>
       <div
-        className={`${styles.itemWrapper} ${isActive && styles.active} flex items-center justify-between w-full  ${
+        className={`${styles.itemWrapper} ${
+          isActive && styles.active
+        } flex items-center justify-between w-full  ${
           hasOptions ? "opacity-100" : isActive === false ? "opacity-[0.6]" : ""
         }`}
       >
@@ -46,12 +46,17 @@ const SideNavLink = ({
         </div>
         {hasOptions && (
           <div className=" justify-self-end ">
-            <ArrowDownOutline className={`${!isActive && "rotate-180"}`} />
+            <ArrowDownOutline className={`${isActive && "rotate-180"}`} />
           </div>
         )}
       </div>
-      {hasOptions &&  (
-        <ul className={clsx(`${styles.dropDown}`, isActive && `${styles.showDropDown}`)}>
+      {hasOptions && (
+        <ul
+          className={clsx(
+            `${styles.dropDown}`,
+            isActive && `${styles.showDropDown}`
+          )}
+        >
           {optionChild}
         </ul>
       )}
