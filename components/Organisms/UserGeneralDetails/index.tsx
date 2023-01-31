@@ -15,6 +15,10 @@ const UserGeneralDetails = () => {
   const { id } = router.query;
   const [selectedUser, setSelectedUser] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const storedUser =
+    typeof localStorage !== "undefined"
+      ? localStorage.getItem("selectedUser") || ""
+      : "";
 
   const getUsers = () => {
     setIsLoading(true);
@@ -31,13 +35,14 @@ const UserGeneralDetails = () => {
 
   useEffect(() => {
     getUsers();
-    const storedUser =
-      typeof localStorage !== "undefined"
-        ? localStorage.getItem("selectedUser") || ""
-        : "";
-    const usersData = JSON.parse(storedUser);
-    setSelectedUser(usersData?.data);
   }, []);
+
+  useEffect(() => {
+    if (storedUser) {
+      const usersData = JSON.parse(storedUser);
+      setSelectedUser(usersData?.data);
+    }
+  }, [storedUser]);
 
   const personalInfo = getUserPersonalInfo(selectedUser);
   const educationAndEmployment = getUserEduEmployment(selectedUser);
